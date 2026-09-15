@@ -14,11 +14,13 @@
 ## 1. Caracterização da Organização
 *(vale 7,5% — Dimensão Conceitual)*
 
-- **Nome e natureza da organização:** *Waldesa Comércio*
-- **Contexto e porte:** *Com fins lucrativos, conta com cerca de 35 a 40 funcionários, 20 a 30 clientes por dia em loja fisica e 20 a 30 pela internet*
-- **Problemas e necessidades identificados:** *Controle de estoque*
-- **Justificativa da escolha:** *Porque é uma empresa acessível e que tem tudo registrado em sistema e planilhas *
-- **Evidências da organização:** *comprove que a organização existe e que o grupo teve acesso a ela — ex.: fotos do local/da visita, link da organização no Google (Google Maps/Google Meu Negócio, site, rede social), endereço completo e forma de contato (telefone, e-mail, responsável pela organização).*
+- **Nome e natureza da organização:** *Waldesa Comércio, empresa com fins lucrativos que atua no comércio varejista de materiais elétricos e representações comerciais.*
+- **Contexto e porte:** *A empresa existe desde 1966. A unidade da Santa Ifigênia possui cerca de 40 funcionários e realiza aproximadamente 40 a 50 vendas por dia, contando atendimentos presenciais, on-line e e-commerce.*
+- **Problemas e necessidades identificados:** O principal problema encontrado foi o controle de estoque. Alguns produtos são registrados manualmente com quantidades incorretas, causando os chamados "furos de estoque".*
+- **Justificativa da escolha:** *A empresa foi escolhida por ser uma organização real e acessível ao grupo, além de possuir processos que podem ser analisados e melhorados através da tecnologia.*
+- **Evidências da organização:** *Site: https://www.waldesa.com.br/
+  Instagram: https://www.instagram.com/waldesaoficial
+  As fotos da empresa serão adicionadas após autorização. Também será buscado um contato oficial para o acompanhamento do projeto.*
 
 ---
 
