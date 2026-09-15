@@ -2,22 +2,13 @@
 
 ## 1. Caracterização da Organização
 
-* **Nome e natureza da organização:** Waldesa Comércio, empresa com fins lucrativos que atua no comércio varejista de materiais elétricos e representações comerciais.
-
-* **Histórico:** A empresa existe desde 1966. Começou suas atividades focada no comércio varejista de materiais elétricos e representações comerciais, estabelecendo uma forte presença regional na Grande São Paulo, com destaque para a sede e filiais em cidades como Mogi das Cruzes e na tradicional região eletroeletrônica da Rua Santa Ifigênia, na capital paulista.
-
-* **Contexto e porte:** A unidade da Santa Ifigênia possui cerca de 40 funcionários e realiza aproximadamente 40 a 50 vendas por dia, contando atendimentos presenciais (balcão), on-line e por plataformas de e-commerce.
-
-* **Meios de registro de informações:** As informações principais estão todas registradas em sistema, e pelo menos 90% também são registradas em planilhas, além do uso de WhatsApp e anotações manuais.
-
-* **Problemas e necessidades identificados:** O principal problema encontrado foi o controle de estoque. Muitas peças são registradas manualmente com quantidades incorretas, causando os chamados "furos de estoque". Como solução paliativa, a empresa costuma realizar contagens de estoque anuais, mas nunca buscou uma solução real e definitiva para o problema.
-
-* **Justificativa da escolha:** A empresa foi escolhida por ser uma organização real e acessível ao grupo, além de possuir processos que podem ser analisados e melhorados através da tecnologia.
-
-* **Evidências da organização:**
-  Site: https://www.waldesa.com.br/
-  Instagram: https://www.instagram.com/waldesaoficial?stkn=amJsaHRrcGN5eHB5
-  As fotos da empresa serão adicionadas após autorização. Também será buscado um contato oficial para o acompanhamento do projeto (follow up).
+- *Nome e natureza da organização:* Waldesa Comércio, empresa com fins lucrativos que atua no comércio varejista de materiais elétricos e representações comerciais.
+- *Contexto e porte:* A empresa existe desde 1966. A unidade da Santa Ifigênia possui cerca de 40 funcionários e realiza aproximadamente 40 a 50 vendas por dia, contando atendimentos presenciais, on-line e e-commerce.
+- *Problemas e necessidades identificados:* O principal problema encontrado foi o controle de estoque. Alguns produtos são registrados manualmente com quantidades incorretas, causando os chamados "furos de estoque".*
+- *Justificativa da escolha:* A empresa foi escolhida por ser uma organização real e acessível ao grupo, além de possuir processos que podem ser analisados e melhorados através da tecnologia.
+- *Evidências da organização:* *Site: https://www.waldesa.com.br/
+  Instagram: https://www.instagram.com/waldesaoficial
+  As fotos da empresa serão adicionadas após autorização. Também será buscado um contato oficial para o acompanhamento do projeto.*
 
 ---
 
