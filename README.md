@@ -237,8 +237,6 @@ Atualmente não há limites definidos de quantidade, valor ou tempo em nenhum do
 | Atributo       | Descrição          | Regra de negócio associada |
 | -------------- | ------------------ | -------------------------- |
 | id_item_venda  | Identificação      | Único                      |
-| id_venda       | Venda              | Deve pertencer a uma venda |
-| id_produto     | Produto            | Deve existir               |
 | quantidade     | Quantidade vendida | Maior que zero             |
 | preco_unitario | Preço unitário     | Valor da venda             |
 
@@ -259,7 +257,6 @@ Atualmente não há limites definidos de quantidade, valor ou tempo em nenhum do
 | data_pedido       | Data do pedido       | Obrigatória                   |
 | status            | Situação do pedido   | Deve ser válido               |
 | forma_recebimento | Forma de recebimento | Retirada, entrega ou Correios |
-| id_cliente        | Cliente              | Relacionado ao pedido         |
 
 ### Entrega
 
@@ -270,7 +267,6 @@ Atualmente não há limites definidos de quantidade, valor ou tempo em nenhum do
 | data_entrega     | Data realizada | Após conclusão             |
 | status           | Situação       | Deve ser válido            |
 | endereco_entrega | Endereço       | Obrigatório para entrega   |
-| id_motorista     | Motorista      | Responsável pela entrega   |
 
 ### Motorista
 
@@ -286,7 +282,6 @@ Atualmente não há limites definidos de quantidade, valor ou tempo em nenhum do
 | ------------ | --------------- | -------------------------- |
 | id_entrada   | Identificação   | Único                      |
 | data_entrada | Data de entrada | Obrigatória                |
-| id_nota      | Nota fiscal     | Relacionada à entrada      |
 | fornecedor   | Fornecedor      | Identifica a origem        |
 
 ### Item_Entrada
@@ -294,8 +289,6 @@ Atualmente não há limites definidos de quantidade, valor ou tempo em nenhum do
 | Atributo        | Descrição           | Regra de negócio associada   |
 | --------------- | ------------------- | ---------------------------- |
 | id_item_entrada | Identificação       | Único                        |
-| id_entrada      | Entrada             | Deve pertencer a uma entrada |
-| id_produto      | Produto             | Deve existir                 |
 | quantidade      | Quantidade recebida | Maior que zero               |
 | codigo_produto  | Código do produto   | Deve corresponder ao produto |
 
