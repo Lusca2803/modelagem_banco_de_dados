@@ -231,8 +231,6 @@ Atualmente não há limites definidos de quantidade, valor ou tempo em nenhum do
 | id_venda    | Identificação  | Único                      |
 | data_venda  | Data da venda  | Obrigatória                |
 | valor_total | Valor da venda | Calculado pelos itens      |
-| id_cliente  | Cliente        | Relacionado ao cliente     |
-| id_vendedor | Vendedor       | Relacionado ao vendedor    |
 
 ### Item_Venda
 
