@@ -180,20 +180,20 @@ Atualmente não há limites definidos de quantidade, valor ou tempo em nenhum do
 
 ### Cliente
 
-| Atributo           | Descrição                                                         | Regra de negócio associada         |
-| ------------------ | ----------------------------------------------------------------- | ---------------------------------- |
-| id_cliente         | Identificação do cliente                                          | Único                              |
-| nome               | Nome do cliente                                                   | Obrigatório                        |
-| CPF_CNPJ           | Documento (CPF ou CNPJ)                                           | Obrigatório — identifica o cliente |
-| data_nascimento    | Data de nascimento                                                | Obrigatória                        |
-| telefone           | Telefone                                                          | Obrigatório                        |
-| email              | E-mail                                                            | Quando informado                   |
-| endereco           | Endereço                                                          | Obrigatório — usado nas entregas   |
-| CEP                | CEP                                                               | Obrigatório                        |
-| inscricao_estadual | Inscrição estadual                                                | Obrigatória                        |
-| data_abertura      | Data de abertura                                                  | Obrigatória                        |
-| cnae_principal     | Código e descrição da atividade econômica (CNAE) principal        | Obrigatório                        |
-| cnae_secundarias   | Códigos e descrições das atividades econômicas (CNAE) secundárias | Obrigatório                        |
+| Atributo            | Descrição                                                        | Regra de negócio associada    |
+| ------------------- | ----------------------------------------------------------------- | ------------------------------ |
+| id_cliente          | Identificação do cliente                                          | Único                          |
+| nome                | Nome do cliente                                                   | Obrigatório                    |
+| CPF_CNPJ            | Documento (CPF ou CNPJ)                                           | Obrigatório — identifica o cliente |
+| data_nascimento     | Data de nascimento                                                | Obrigatória                    |
+| telefone            | Telefone                                                          | Obrigatório                    |
+| email               | E-mail                                                            | Quando informado               |
+| endereco            | Endereço                                                          | Obrigatório — usado nas entregas |
+| CEP                 | CEP                                                                | Obrigatório                    |
+| inscricao_estadual  | Inscrição estadual                                                | Obrigatória                    |
+| data_abertura       | Data de abertura                                                  | Obrigatória                    |
+| cnae_principal      | Código e descrição da atividade econômica (CNAE) principal        | Obrigatório                    |
+| cnae_secundarias    | Códigos e descrições das atividades econômicas (CNAE) secundárias | Obrigatório                    |
 
 > Os dados pessoais do cliente são importantes para contato, cadastro e emissão de notas fiscais. Uma vez cadastrado, o cliente mantém todos os seus dados no sistema, com possibilidade de alteração. A busca pelo cadastro pode ser feita por nome, CPF/CNPJ ou pelo número dos pedidos já realizados pelo cliente.
 
@@ -218,7 +218,7 @@ Atualmente não há limites definidos de quantidade, valor ou tempo em nenhum do
 ### Estoque
 
 | Atributo         | Descrição             | Regra de negócio associada   |
-| ---------------- | --------------------- | ---------------------------- |
+| ---------------- | --------------------- | ----------------------------- |
 | id_estoque       | Identificação         | Único                        |
 | quantidade       | Quantidade disponível | Não negativa                 |
 | localizacao      | Local do produto      | Deve existir                 |
@@ -231,12 +231,16 @@ Atualmente não há limites definidos de quantidade, valor ou tempo em nenhum do
 | id_venda    | Identificação  | Único                      |
 | data_venda  | Data da venda  | Obrigatória                |
 | valor_total | Valor da venda | Calculado pelos itens      |
+| id_cliente  | Cliente        | Relacionado ao cliente     |
+| id_vendedor | Vendedor       | Relacionado ao vendedor    |
 
 ### Item_Venda
 
 | Atributo       | Descrição          | Regra de negócio associada |
 | -------------- | ------------------ | -------------------------- |
 | id_item_venda  | Identificação      | Único                      |
+| id_venda       | Venda              | Deve pertencer a uma venda |
+| id_produto     | Produto            | Deve existir               |
 | quantidade     | Quantidade vendida | Maior que zero             |
 | preco_unitario | Preço unitário     | Valor da venda             |
 
@@ -252,11 +256,12 @@ Atualmente não há limites definidos de quantidade, valor ou tempo em nenhum do
 ### Pedido
 
 | Atributo          | Descrição            | Regra de negócio associada    |
-| ----------------- | -------------------- | ----------------------------- |
-| id_pedido         | Identificação        | Único                         |
-| data_pedido       | Data do pedido       | Obrigatória                   |
-| status            | Situação do pedido   | Deve ser válido               |
-| forma_recebimento | Forma de recebimento | Retirada, entrega ou Correios |
+| ----------------- | -------------------- | ------------------------------ |
+| id_pedido         | Identificação        | Único                          |
+| data_pedido       | Data do pedido       | Obrigatória                    |
+| status            | Situação do pedido   | Deve ser válido                |
+| forma_recebimento | Forma de recebimento | Retirada, entrega ou Correios  |
+| id_cliente        | Cliente              | Relacionado ao pedido          |
 
 ### Entrega
 
@@ -267,6 +272,7 @@ Atualmente não há limites definidos de quantidade, valor ou tempo em nenhum do
 | data_entrega     | Data realizada | Após conclusão             |
 | status           | Situação       | Deve ser válido            |
 | endereco_entrega | Endereço       | Obrigatório para entrega   |
+| id_motorista     | Motorista      | Responsável pela entrega   |
 
 ### Motorista
 
@@ -282,15 +288,18 @@ Atualmente não há limites definidos de quantidade, valor ou tempo em nenhum do
 | ------------ | --------------- | -------------------------- |
 | id_entrada   | Identificação   | Único                      |
 | data_entrada | Data de entrada | Obrigatória                |
+| id_nota      | Nota fiscal     | Relacionada à entrada      |
 | fornecedor   | Fornecedor      | Identifica a origem        |
 
 ### Item_Entrada
 
 | Atributo        | Descrição           | Regra de negócio associada   |
-| --------------- | ------------------- | ---------------------------- |
-| id_item_entrada | Identificação       | Único                        |
-| quantidade      | Quantidade recebida | Maior que zero               |
-| codigo_produto  | Código do produto   | Deve corresponder ao produto |
+| --------------- | ------------------- | ----------------------------- |
+| id_item_entrada | Identificação       | Único                         |
+| id_entrada      | Entrada             | Deve pertencer a uma entrada  |
+| id_produto      | Produto             | Deve existir                  |
+| quantidade      | Quantidade recebida | Maior que zero                |
+| codigo_produto  | Código do produto   | Deve corresponder ao produto  |
 
 > **Atenção à privacidade:** os exemplos utilizados para ilustrar os atributos devem ser fictícios. Não devem ser utilizados dados reais de clientes, funcionários ou outras pessoas da organização.
 
