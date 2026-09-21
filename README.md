@@ -402,15 +402,3 @@ Os critérios serão avaliados através da avaliação 360º entre os integrante
 * **Comprometimento:** cumprimento das tarefas.
 * **Colaboração:** trabalho em equipe.
 * **Autonomia:** busca por soluções e melhorias.
-
----
-
-## Resumo dos Pesos
-
-| Dimensão | Peso total |
-|----------|-----------|
-| Conceitual (contexto, requisitos/regras, modelagem, justificativa técnica) | 30% |
-| Procedimental (requisitos, fluxogramas, dicionário de dados, DER) | 50% |
-| Atitudinal (participação, comprometimento, colaboração, autonomia) | 20% |
-
-**Entrega final:** README.md completo + DER anexado no repositório GitHub do grupo.
