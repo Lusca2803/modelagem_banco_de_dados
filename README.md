@@ -19,7 +19,7 @@
 
 ## 1. Caracterização da Organização
 
-(vale 7,5% — Dimensão Conceitual)
+
 
 * **Nome e natureza da organização:** Waldesa Comércio, empresa com fins lucrativos que atua no comércio varejista de materiais elétricos e representações comerciais.
 
@@ -43,7 +43,7 @@
 
 ## 2. Processos de Negócio
 
-(vale 10% — Dimensão Procedimental)
+
 
 ### Principais processos mapeados
 
@@ -98,7 +98,7 @@ Os fluxogramas dos principais processos serão anexados ao repositório.
 
 ## 3. Requisitos do Sistema
 
-(esta seção e a Seção 4 "Regras de Negócio" DIVIDEM 7,5% na dimensão conceitual — juntas valem 7,5%, não 7,5% cada — + 4% exclusivos desta seção na organização/documentação)
+
 
 ### 3.1 Requisitos Funcionais
 
@@ -147,7 +147,7 @@ Em conversa com a organização sobre como seria um sistema ideal, foram levanta
 
 ## 4. Regras de Negócio
 
-(esta seção DIVIDE com a Seção 3 "Requisitos do Sistema" os mesmos 7,5% da dimensão conceitual — juntas valem 7,5%, não 7,5% cada — + 4% exclusivos desta seção na documentação. "Regras de negócio" é o termo técnico usado em modelagem de dados para as regras de funcionamento de qualquer organização, com ou sem fins lucrativos)
+
 
 ### Regras operacionais
 
@@ -176,7 +176,7 @@ Atualmente não há limites definidos de quantidade, valor ou tempo em nenhum do
 
 ## 5. Dicionário de Dados Conceitual (Preliminar)
 
-(vale 10% — Dimensão Procedimental - Segue o modelo do arquivo 02-03g_Exemplo_Dicionario_Dados.pdf)
+
 
 ### Cliente
 
@@ -307,7 +307,7 @@ Atualmente não há limites definidos de quantidade, valor ou tempo em nenhum do
 
 ## 6. Modelagem Conceitual (Entidades, Atributos, Relacionamentos)
 
-(vale 7,5% na dimensão conceitual)
+
 
 ### Entidades reconhecidas
 
@@ -344,7 +344,7 @@ O modelo considera principalmente o controle das entradas e saídas de produtos,
 
 ## 7. Diagrama Entidade-Relacionamento (DER)
 
-(vale 20% — é o item de maior peso da entrega)
+
 
 O DER será anexado ao repositório em formato de imagem.
 
@@ -361,7 +361,7 @@ O modelo será baseado nos processos observados na empresa e dará atenção pri
 
 ## 8. Justificativa Técnica
 
-(vale 7,5% — sozinho, é o subcritério de maior peso dentro da Dimensão Conceitual)
+
 
 As entidades foram escolhidas com base nos processos observados na empresa.
 
@@ -377,7 +377,6 @@ A modelagem também considera o problema dos furos de estoque, permitindo que as
 
 ## 9. Uso de Inteligência Artificial
 
-(documentação obrigatória — não é opcional se o grupo usou IA em qualquer etapa: pesquisa, escrita, organização de ideias ou revisão de texto)
 
 Foi utilizada a ferramenta **ChatGPT** para auxiliar na organização das informações e na estruturação do README.
 
@@ -394,7 +393,7 @@ Foi utilizada a ferramenta **ChatGPT** para auxiliar na organização das inform
 
 ---
 
-## Critérios Atitudinais (20%)
+## Critérios Atitudinais 
 
 Os critérios serão avaliados através da avaliação 360º entre os integrantes e pelo histórico de commits do GitHub.
 
