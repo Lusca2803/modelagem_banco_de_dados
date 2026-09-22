@@ -64,15 +64,15 @@
 
 ### Como os processos funcionam
 
-**Cadastro e Vendas:** ainda serão detalhados em contato com um dos vendedores da empresa, através de perguntas específicas sobre o passo a passo dessas etapas.
+**Cadastro e Vendas:** vendedor pede dados do cliente como CPF/CNPJ, inscrição estadual, nome, data de nascimento, preenchendo tudo que o sistema pede; abre um pedido ou orçamento, procura pela descrição da peça, onde aparece se tem disponível em estoque ou não, seleciona a peça e quantidade, adiciona ao pedido, finaliza o processo e emite o pedido. 
 
-**Estoque:** o processo começa pela compra dos produtos. Quando as peças chegam, as notas fiscais são digitalizadas e todos os produtos são colocados no sistema, cada um identificado por seu código. Depois, os produtos são repostos em seus locais corretos nas prateleiras do estoque.
+**Estoque:** o processo começa pela compra dos produtos. Quando as peças chegam, as notas fiscais são digitalizadas e todos os produtos são colocados no sistema, cada um identificado por seu código. Depois, os produtos são repostos em seus locais corretos nas prateleiras do estoque. após feito o pedido no balcão de vendas, o vendedor informa pelo grupo do Teams o numero do pedido, os separadores/estoquistas entram na aba "emissão de pedidos" abrem o pedido e tiram uma impressão para fazer a separação. após isso, apenas informam o vendedor no grupo que esta separado. 
 
 **Entrega:** existe um grupo na plataforma Teams, onde os vendedores enviam seus pedidos junto com a forma como cada cliente irá receber: retirada na loja, entrega pela própria empresa ou envio pelos Correios. A partir daí, o responsável pelo estoque separa os pedidos de entrega e os organiza em uma planilha. No final do dia, o motorista tem o carro carregado com todas as notas fiscais e os endereços, e as entregas são realizadas no dia seguinte.
 
 ### O que pode dar errado?
 
-A falta de estoque, principalmente por conta dos chamados "furos de estoque".
+A falta de estoque, principalmente por conta dos chamados "furos de estoque", além de, os separadores não se comunicarem com os vendedores sobre a separação do pedido e o cliente esperar mais do que deveria.
 
 ### O que acontece após os processos?
 
@@ -83,12 +83,12 @@ A falta de estoque, principalmente por conta dos chamados "furos de estoque".
 ### Como os processos se conectam?
 
 * **Cadastro:** conecta-se ao sistema, onde ficam registradas todas as compras do cliente, orçamentos gerados, notas fiscais e pedidos.
-* **Vendas:** conecta-se ao estoque, pois tudo o que está em um pedido é retirado automaticamente do sistema, com a redução da quantidade de peças correspondente.
+* **Vendas:** conecta-se ao estoque, pois tudo o que está em um pedido é retirado automaticamente do sistema, com a redução da quantidade de peças disponiveis.
 * **Entregas:** estão diretamente ligadas às vendas, já que fazem parte do mesmo fluxo. Porém, todas as entregas finalizadas também ficam registradas em um grupo de WhatsApp.
 
 ### Etapa que poderia ser automatizada
 
-O registro dos produtos que chegam ao estoque. A ideia é que, a partir da nota fiscal, as peças sejam colocadas automaticamente no sistema de estoque, diminuindo os erros manuais.
+a finalização do pedido pelo próprio sistema.
 
 ### Fluxogramas
 
