@@ -403,3 +403,18 @@ Os critérios serão avaliados através da avaliação 360º entre os integrante
 * **Comprometimento:** cumprimento das tarefas.
 * **Colaboração:** trabalho em equipe.
 * **Autonomia:** busca por soluções e melhorias.
+
+## Fotos do local
+
+## Foto ou print de registros 
+* Não tivemos autorização da empresa para usar imagens de planilhas, cadernos e etc… pois continha dados pessoais de muitos clientes
+
+## Nome, cargo e contato do responsável 
+* Kauã Steter de Souza 
+kauasteter06@gmail.com
+Suporte Técnico Júnior
+
+## Link do Google Maps / site / rede social 
+* https://maps.google.com/maps/place//data=!4m2!3m1!1s0x94ce591423db0ce7:0xa1f08048818de70a?entry=s&sa=X&ved=2ahUKEwi6tY2AooOXAxULObkGHawlNj8Q4kB6BAgZEAA&hl=pt
+* https://www.waldesa.com.br/
+* https://www.instagram.com/waldesaoficial?stkn=amJsaHRrcGN5eHB5
