@@ -13,6 +13,8 @@
 
 ## Metadados
 
+| Nome | RGM |
+| :--- | :--- |
 * **Nomes dos alunos e RGM:** *LUCAS HENRIQUE ROQUE CRUZ, RENAN CORREIA FERREIRA DE SOUSA, VINICIUS SCHERER DI GIORNO.*
 
 ---
