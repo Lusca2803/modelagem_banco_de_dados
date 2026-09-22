@@ -65,11 +65,11 @@
 
 ### Como os processos funcionam
 
-**Cadastro e Vendas:** vendedor pede dados do cliente como CPF/CNPJ, inscrição estadual, nome, data de nascimento, preenchendo tudo que o sistema pede; abre um pedido ou orçamento, procura pela descrição da peça, onde aparece se tem disponível em estoque ou não, seleciona a peça e quantidade, adiciona ao pedido, finaliza o processo e emite o pedido. 
+**Cadastro e Vendas:** Vendedor pede dados do cliente como CPF/CNPJ, inscrição estadual, nome, data de nascimento, preenchendo tudo que o sistema pede; abre um pedido ou orçamento, procura pela descrição da peça, onde aparece se tem disponível em estoque ou não, seleciona a peça e quantidade, adiciona ao pedido, finaliza o processo e emite o pedido. 
 
-**Estoque:** o processo começa pela compra dos produtos. Quando as peças chegam, as notas fiscais são digitalizadas e todos os produtos são colocados no sistema, cada um identificado por seu código. Depois, os produtos são repostos em seus locais corretos nas prateleiras do estoque. após feito o pedido no balcão de vendas, o vendedor informa pelo grupo do Teams o numero do pedido, os separadores/estoquistas entram na aba "emissão de pedidos" abrem o pedido e tiram uma impressão para fazer a separação. após isso, apenas informam o vendedor no grupo que esta separado. 
+**Estoque:** O processo começa pela compra dos produtos. Quando as peças chegam, as notas fiscais são digitalizadas e todos os produtos são colocados no sistema, cada um identificado por seu código. Depois, os produtos são repostos em seus locais corretos nas prateleiras do estoque. Após feito o pedido no balcão de vendas, o vendedor informa pelo grupo do Teams o numero do pedido, os separadores/estoquistas entram na aba "emissão de pedidos" abrem o pedido e tiram uma impressão para fazer a separação. Após isso, apenas informam o vendedor no grupo que esta separado. 
 
-**Entrega:** existe um grupo na plataforma Teams, onde os vendedores enviam seus pedidos junto com a forma como cada cliente irá receber: retirada na loja, entrega pela própria empresa ou envio pelos Correios. A partir daí, o responsável pelo estoque separa os pedidos de entrega e os organiza em uma planilha. No final do dia, o motorista tem o carro carregado com todas as notas fiscais e os endereços, e as entregas são realizadas no dia seguinte.
+**Entrega:** Existe um grupo na plataforma Teams, onde os vendedores enviam seus pedidos junto com a forma como cada cliente irá receber: retirada na loja, entrega pela própria empresa ou envio pelos Correios. A partir daí, o responsável pelo estoque separa os pedidos de entrega e os organiza em uma planilha. No final do dia, o motorista tem o carro carregado com todas as notas fiscais e os endereços, e as entregas são realizadas no dia seguinte.
 
 ### O que pode dar errado?
 
@@ -77,9 +77,9 @@ A falta de estoque, principalmente por conta dos chamados "furos de estoque", al
 
 ### O que acontece após os processos?
 
-* **Cadastro:** o cliente tem todos os seus dados armazenados no sistema.
-* **Venda:** para clientes já cadastrados, é gerada a nota fiscal; para clientes sem cadastro, é gerado o cupom fiscal.
-* **Entrega:** não gera nenhum documento adicional além da nota fiscal já emitida na venda.
+* **Cadastro:** O cliente tem todos os seus dados armazenados no sistema.
+* **Venda:** Para clientes já cadastrados, é gerada a nota fiscal; para clientes sem cadastro, é gerado o cupom fiscal.
+* **Entrega:** Não gera nenhum documento adicional além da nota fiscal já emitida na venda.
 
 ### Como os processos se conectam?
 
@@ -134,7 +134,7 @@ A finalização do pedido pelo no sistema; O registro e confirmação de entrega
 Em conversa com a organização sobre como seria um sistema ideal, foram levantados os seguintes pontos:
 
 * **Funcionalidades obrigatórias:** O sistema precisaria agrupar automaticamente todos os materiais que chegam e que saem do estoque, atualizando as quantidades sem a necessidade de lançamentos manuais, facilitando o ajuste de estoque e tornando o processo o menos manual possível: Finalização de pedido do estoque; Confirmação de entrega dos motoristas para os vendedores.
-* **Perfis de uso:** a ideia é que todos os setores da empresa sejam beneficiados pelo sistema, como atendente, gerente, administrador, entre outros.
+* **Perfis de uso:** A ideia é que todos os setores da empresa sejam beneficiados pelo sistema, como atendente, gerente, administrador, entre outros.
 * **Visibilidade das informações:** Cada setor deve visualizar apenas as informações referentes ao que envolve seu próprio trabalho. A gerência é o único perfil com acesso a todas as informações, além dos encarregados de cada setor que terão acesso ao que é neccesário para funcionamento de sua area de atuação.
 * **Segurança e privacidade:** Os dados dos clientes precisam ser protegidos, sem possibilidade de serem copiados ou compartilhados sem autorização.
 * **Funcionamento off-line:** É importante que ao menos a parte de saída de peças em pedidos funcione mesmo sem conexão com a internet. Não há exigência de que o sistema todo funcione off-line.
