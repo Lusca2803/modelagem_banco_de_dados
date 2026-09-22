@@ -13,7 +13,7 @@
 
 ## Metadados
 
-* **Nomes dos alunos e RGM:** *Preencher com os nomes e RGM dos integrantes do grupo.*
+* **Nomes dos alunos e RGM:** *LUCAS HENRIQUE ROQUE CRUZ, RENAN CORREIA FERREIRA DE SOUSA, VINICIUS SCHERER DI GIORNO.*
 
 ---
 
@@ -23,7 +23,7 @@
 
 * **Nome e natureza da organização:** Waldesa Comércio, empresa com fins lucrativos que atua no comércio varejista de materiais elétricos e representações comerciais.
 
-* **Histórico:** A empresa existe desde 1966. Começou suas atividades focada no comércio varejista de materiais elétricos e representações comerciais, estabelecendo uma forte presença regional na Grande São Paulo, com destaque para a sede e filiais em cidades como Mogi das Cruzes e na tradicional região eletroeletrônica da Rua Santa Ifigênia, na capital paulista.
+* **Histórico:** A empresa existe desde 1966. Começou suas atividades focada no comércio varejista de materiais elétricos e representações comerciais, estabelecendo uma forte presença regional na Grande São Paulo, com destaque para a sede e filiais em cidades como Mogi das Cruzes e na tradicional região eletroeletrônica da Santa Ifigênia, na capital paulista.
 
 * **Contexto e porte:** A unidade da Santa Ifigênia possui cerca de 40 funcionários e realiza aproximadamente 40 a 50 vendas por dia, contando atendimentos presenciais (balcão), on-line e por plataformas de e-commerce.
 
@@ -51,6 +51,7 @@
 * Vendas;
 * Entrada e controle de estoque;
 * Separação de pedidos;
+* Retirada de pedidos;
 * Entregas.
 
 ### Responsáveis
@@ -82,17 +83,13 @@ A falta de estoque, principalmente por conta dos chamados "furos de estoque", al
 
 ### Como os processos se conectam?
 
-* **Cadastro:** conecta-se ao sistema, onde ficam registradas todas as compras do cliente, orçamentos gerados, notas fiscais e pedidos.
-* **Vendas:** conecta-se ao estoque, pois tudo o que está em um pedido é retirado automaticamente do sistema, com a redução da quantidade de peças disponiveis.
-* **Entregas:** estão diretamente ligadas às vendas, já que fazem parte do mesmo fluxo. Porém, todas as entregas finalizadas também ficam registradas em um grupo de WhatsApp.
+* **Cadastro:** Conecta-se ao sistema, onde ficam registradas todas as compras do cliente, orçamentos gerados, notas fiscais e pedidos.
+* **Vendas:** Conecta-se ao estoque, pois tudo o que está em um pedido é retirado automaticamente do sistema, com a redução da quantidade de peças disponiveis.
+* **Entregas:** Estão diretamente ligadas às vendas, já que fazem parte do mesmo fluxo. Porém, todas as entregas finalizadas também ficam registradas em um grupo de WhatsApp.
 
 ### Etapa que poderia ser automatizada
 
-a finalização do pedido pelo próprio sistema.
-
-### Fluxogramas
-
-Os fluxogramas dos principais processos serão anexados ao repositório.
+A finalização do pedido pelo no sistema; O registro e confirmação de entregas e retiradas.
 
 ---
 
@@ -136,12 +133,12 @@ Os fluxogramas dos principais processos serão anexados ao repositório.
 
 Em conversa com a organização sobre como seria um sistema ideal, foram levantados os seguintes pontos:
 
-* **Funcionalidades obrigatórias:** o sistema precisaria agrupar automaticamente todos os materiais que chegam e que saem do estoque, atualizando as quantidades sem a necessidade de lançamentos manuais, facilitando o ajuste de estoque e tornando o processo o menos manual possível.
+* **Funcionalidades obrigatórias:** O sistema precisaria agrupar automaticamente todos os materiais que chegam e que saem do estoque, atualizando as quantidades sem a necessidade de lançamentos manuais, facilitando o ajuste de estoque e tornando o processo o menos manual possível: Finalização de pedido do estoque; Confirmação de entrega dos motoristas para os vendedores.
 * **Perfis de uso:** a ideia é que todos os setores da empresa sejam beneficiados pelo sistema, como atendente, gerente, administrador, entre outros.
-* **Visibilidade das informações:** cada setor deve visualizar apenas as informações referentes ao que envolve seu próprio trabalho. A gerência é o único perfil com acesso a todas as informações.
-* **Segurança e privacidade:** os dados dos clientes precisam ser protegidos, sem possibilidade de serem copiados ou compartilhados sem autorização.
-* **Funcionamento off-line:** é importante que ao menos a parte de saída de peças em pedidos funcione mesmo sem conexão com a internet. Não há exigência de que o sistema todo funcione off-line.
-* **Momentos críticos:** o sistema não pode falhar principalmente nas semanas de pagamento e vale, quando a movimentação é maior.
+* **Visibilidade das informações:** Cada setor deve visualizar apenas as informações referentes ao que envolve seu próprio trabalho. A gerência é o único perfil com acesso a todas as informações, além dos encarregados de cada setor que terão acesso ao que é neccesário para funcionamento de sua area de atuação.
+* **Segurança e privacidade:** Os dados dos clientes precisam ser protegidos, sem possibilidade de serem copiados ou compartilhados sem autorização.
+* **Funcionamento off-line:** É importante que ao menos a parte de saída de peças em pedidos funcione mesmo sem conexão com a internet. Não há exigência de que o sistema todo funcione off-line.
+* **Momentos críticos:** O sistema não pode falhar principalmente nas semanas de pagamento e vale, quando a movimentação é maior.
 
 ---
 
@@ -151,7 +148,7 @@ Em conversa com a organização sobre como seria um sistema ideal, foram levanta
 
 ### Regras operacionais
 
-* Cada produto deve possuir um código.
+* Cada produto deve possuir um código (vem da distribuidora).
 * Produtos recebidos devem ser registrados no sistema.
 * A entrada deve estar relacionada à nota fiscal.
 * O estoque deve ser atualizado nas entradas e saídas.
@@ -301,7 +298,7 @@ Atualmente não há limites definidos de quantidade, valor ou tempo em nenhum do
 | quantidade      | Quantidade recebida | Maior que zero                |
 | codigo_produto  | Código do produto   | Deve corresponder ao produto  |
 
-> **Atenção à privacidade:** os exemplos utilizados para ilustrar os atributos devem ser fictícios. Não devem ser utilizados dados reais de clientes, funcionários ou outras pessoas da organização.
+> **Atenção à privacidade:** Os exemplos utilizados para ilustrar os atributos devem ser fictícios. Não devem ser utilizados dados reais de clientes, funcionários ou outras pessoas da organização.
 
 ---
 
