@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dicionário de Dados Conceitual — Waldesa Comércio</title>
+<style>
+  :root {
+    --ink: #23241f;
+    --ink-soft: #55564d;
+    --paper: #faf8f3;
+    --panel: #ffffff;
+    --line: #d8d3c4;
+    --accent: #6b5a3e;
+    --accent-soft: #eee7d6;
+    --key: #8a3324;
+    --mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+    line-height: 1.5;
+  }
+
+  header {
+    padding: 3.5rem 1.5rem 2.5rem;
+    border-bottom: 1px solid var(--line);
+    max-width: 920px;
+    margin: 0 auto;
+  }
+
+  header .eyebrow {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: var(--accent);
+    letter-spacing: 0.02em;
+  }
+
+  header h1 {
+    font-size: 2.1rem;
+    margin: 0.4rem 0 0.6rem;
+    font-weight: 600;
+  }
+
+  header p.sub {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 1.02rem;
+    max-width: 62ch;
+  }
+
+  header .meta {
+    margin-top: 1.2rem;
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+  }
+
+  header .meta a { color: var(--accent); }
+
+  nav.toc {
+    max-width: 920px;
+    margin: 2rem auto 0;
+    padding: 0 1.5rem;
+  }
+
+  nav.toc h2 {
+    font-size: 0.78rem;
+    font-family: var(--mono);
+    text-transform: none;
+    color: var(--ink-soft);
+    margin: 0 0 0.7rem;
+  }
+
+  nav.toc ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.35rem 1.5rem;
+  }
+
+  nav.toc li a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    font-size: 0.95rem;
+  }
+
+  nav.toc li a:hover { border-bottom-color: var(--accent); }
+
+  main {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem 5rem;
+  }
+
+  section.entity {
+    padding-top: 3rem;
+    scroll-margin-top: 1.5rem;
+  }
+
+  section.entity + section.entity {
+    border-top: 1px solid var(--line);
+  }
+
+  section.entity h2 {
+    font-size: 1.5rem;
+    margin: 0 0 0.2rem;
+    font-weight: 600;
+  }
+
+  section.entity .count {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    color: var(--ink-soft);
+    margin-bottom: 1.1rem;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--panel);
+    border: 1px solid var(--line);
+  }
+
+  thead th {
+    text-align: left;
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--ink-soft);
+    padding: 0.65rem 0.9rem;
+    border-bottom: 1px solid var(--line);
+    background: var(--accent-soft);
+  }
+
+  tbody td {
+    padding: 0.65rem 0.9rem;
+    border-bottom: 1px solid var(--line);
+    font-size: 0.95rem;
+    vertical-align: top;
+  }
+
+  tbody tr:last-child td { border-bottom: none; }
+
+  td.attr {
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    white-space: nowrap;
+    color: var(--ink);
+  }
+
+  td.attr.key {
+    color: var(--key);
+    font-weight: 600;
+  }
+
+  td.attr.key::after {
+    content: " (PK)";
+    font-size: 0.7rem;
+    color: var(--key);
+    opacity: 0.75;
+  }
+
+  .note {
+    margin-top: 0.9rem;
+    padding: 0.8rem 1rem;
+    background: var(--accent-soft);
+    border-left: 3px solid var(--accent);
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+  }
+
+  footer {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+    color: var(--ink-soft);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--line);
+  }
+
+  @media (max-width: 640px) {
+    nav.toc ol { grid-template-columns: repeat(2, 1fr); }
+    header h1 { font-size: 1.6rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">Entrega 1 — Modelo Conceitual (DER) · Seção 5</div>
+  <h1>Dicionário de Dados Conceitual</h1>
+  <p class="sub">Waldesa Comércio — comércio varejista de materiais elétricos e representações comerciais (unidade Santa Ifigênia). Levantamento preliminar das entidades identificadas no processo de modelagem.</p>
+  <div class="meta">Fonte: <a href="https://github.com/Lusca2803/modelagem_banco_de_dados" target="_blank" rel="noopener">github.com/Lusca2803/modelagem_banco_de_dados</a></div>
+</header>
+
+<nav class="toc">
+  <h2>Entidades nesta página</h2>
+  <ol>
+    <li><a href="#cliente">Cliente</a></li>
+    <li><a href="#vendedor">Vendedor</a></li>
+    <li><a href="#produto">Produto</a></li>
+    <li><a href="#estoque">Estoque</a></li>
+    <li><a href="#venda">Venda</a></li>
+    <li><a href="#item_venda">Item_Venda</a></li>
+    <li><a href="#nota_fiscal">Nota_Fiscal</a></li>
+    <li><a href="#pedido">Pedido</a></li>
+    <li><a href="#entrega">Entrega</a></li>
+    <li><a href="#motorista">Motorista</a></li>
+    <li><a href="#entrada_estoque">Entrada_Estoque</a></li>
+    <li><a href="#item_entrada">Item_Entrada</a></li>
+  </ol>
+</nav>
+
+<main>
+
+  <section class="entity" id="cliente">
+    <h2>Cliente</h2>
+    <div class="count">12 atributos</div>
+    <table>
+      <thead><tr><th>Atributo</th><th>Descrição</th><th>Regra de negócio associada</th></tr></thead>
+      <tbody>
+        <tr><td class="attr key">id_cliente</td><td>Identificação do cliente</td><td>Único</td></tr>
+        <tr><td class="attr">nome</td><td>Nome do cliente</td><td>Obrigatório</td></tr>
+        <tr><td class="attr">CPF_CNPJ</td><td>Documento (CPF ou CNPJ)</td><td>Obrigatório — identifica o cliente</td></tr>
+        <tr><td class="attr">data_nascimento</td><td>Data de nascimento</td><td>Obrigatória</td></tr>
+        <tr><td class="attr">telefone</td><td>Telefone</td><td>Obrigatório</td></tr>
+        <tr><td class="attr">email</td><td>E-mail</td><td>Quando informado</td></tr>
+        <tr><td class="attr">endereco</td><td>Endereço</td><td>Obrigatório — usado nas entregas</td></tr>
+        <tr><td class="attr">CEP</td><td>CEP</td><td>Obrigatório</td></tr>
+        <tr><td class="attr">inscricao_estadual</td><td>Inscrição estadual</td><td>Obrigatória</td></tr>
+        <tr><td class="attr">data_abertura</td><td>Data de abertura</td><td>Obrigatória</td></tr>
+        <tr><td class="attr">cnae_principal</td><td>Código e descrição da atividade econômica (CNAE) principal</td><td>Obrigatório</td></tr>
+        <tr><td class="attr">cnae_secundarias</td><td>Códigos e descrições das atividades econômicas (CNAE) secundárias</td><td>Obrigatório</td></tr>
+      </tbody>
+    </table>
+    <div class="note">Os dados pessoais do cliente são importantes para contato, cadastro e emissão de notas fiscais. Uma vez cadastrado, o cliente mantém todos os seus dados no sistema, com possibilidade de alteração. A busca pelo cadastro pode ser feita por nome, CPF/CNPJ ou pelo número dos pedidos já realizados pelo cliente.</div>
+  </section>
+
+  <section class="entity" id="vendedor">
+    <h2>Vendedor</h2>
+    <div class="count">3 atributos</div>
+    <table>
+      <thead><tr><th>Atributo</th><th>Descrição</th><th>Regra de negócio associada</th></tr></thead>
+      <tbody>
+        <tr><td class="attr key">id_vendedor</td><td>Identificação</td><td>Único</td></tr>
+        <tr><td class="attr">nome</td><td>Nome</td><td>Obrigatório</td></tr>
+        <tr><td class="attr">matricula</td><td>Matrícula</td><td>Única</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="entity" id="produto">
+    <h2>Produto</h2>
+    <div class="count">5 atributos</div>
+    <table>
+      <thead><tr><th>Atributo</th><th>Descrição</th><th>Regra de negócio associada</th></tr></thead>
+      <tbody>
+        <tr><td class="attr key">id_produto</td><td>Identificação</td><td>Único</td></tr>
+        <tr><td class="attr">codigo_produto</td><td>Código do produto</td><td>Único</td></tr>
+        <tr><td class="attr">descricao</td><td>Descrição</td><td>Obrigatória</td></tr>
+        <tr><td class="attr">preco</td><td>Preço</td><td>Valor válido</td></tr>
+        <tr><td class="attr">unidade_medida</td><td>Unidade do produto</td><td>Conforme o produto</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="entity" id="estoque">
+    <h2>Estoque</h2>
+    <div class="count">4 atributos</div>
+    <table>
+      <thead><tr><th>Atributo</th><th>Descrição</th><th>Regra de negócio associada</th></tr></thead>
+      <tbody>
+        <tr><td class="attr key">id_estoque</td><td>Identificação</td><td>Único</td></tr>
+        <tr><td class="attr">quantidade</td><td>Quantidade disponível</td><td>Não negativa</td></tr>
+        <tr><td class="attr">localizacao</td><td>Local do produto</td><td>Deve existir</td></tr>
+        <tr><td class="attr">data_atualizacao</td><td>Última atualização</td><td>Atualizada nas movimentações</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="entity" id="venda">
+    <h2>Venda</h2>
+    <div class="count">5 atributos</div>
+    <table>
+      <thead><tr><th>Atributo</th><th>Descrição</th><th>Regra de negócio associada</th></tr></thead>
+      <tbody>
+        <tr><td class="attr key">id_venda</td><td>Identificação</td><td>Único</td></tr>
+        <tr><td class="attr">data_venda</td><td>Data da venda</td><td>Obrigatória</td></tr>
+        <tr><td class="attr">valor_total</td><td>Valor da venda</td><td>Calculado pelos itens</td></tr>
+        <tr><td class="attr">id_cliente</td><td>Cliente</td><td>Relacionado ao cliente</td></tr>
+        <tr><td class="attr">id_vendedor</td><td>Vendedor</td><td>Relacionado ao vendedor</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="entity" id="item_venda">
+    <h2>Item_Venda</h2>
+    <div class="count">5 atributos</div>
+    <table>
+      <thead><tr><th>Atributo</th><th>Descrição</th><th>Regra de negócio associada</th></tr></thead>
+      <tbody>
+        <tr><td class="attr key">id_item_venda</td><td>Identificação</td><td>Único</td></tr>
+        <tr><td class="attr">id_venda</td><td>Venda</td><td>Deve pertencer a uma venda</td></tr>
+        <tr><td class="attr">id_produto</td><td>Produto</td><td>Deve existir</td></tr>
+        <tr><td class="attr">quantidade</td><td>Quantidade vendida</td><td>Maior que zero</td></tr>
+        <tr><td class="attr">preco_unitario</td><td>Preço unitário</td><td>Valor da venda</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="entity" id="nota_fiscal">
+    <h2>Nota_Fiscal</h2>
+    <div class="count">4 atributos</div>
+    <table>
+      <thead><tr><th>Atributo</th><th>Descrição</th><th>Regra de negócio associada</th></tr></thead>
+      <tbody>
+        <tr><td class="attr key">id_nota</td><td>Identificação</td><td>Único</td></tr>
+        <tr><td class="attr">numero_nota</td><td>Número da nota</td><td>Identifica a nota</td></tr>
+        <tr><td class="attr">data_emissao</td><td>Data de emissão</td><td>Obrigatória</td></tr>
+        <tr><td class="attr">chave_acesso</td><td>Chave da nota</td><td>Identifica a nota</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="entity" id="pedido">
+    <h2>Pedido</h2>
+    <div class="count">5 atributos</div>
+    <table>
+      <thead><tr><th>Atributo</th><th>Descrição</th><th>Regra de negócio associada</th></tr></thead>
+      <tbody>
+        <tr><td class="attr key">id_pedido</td><td>Identificação</td><td>Único</td></tr>
+        <tr><td class="attr">data_pedido</td><td>Data do pedido</td><td>Obrigatória</td></tr>
+        <tr><td class="attr">status</td><td>Situação do pedido</td><td>Deve ser válido</td></tr>
+        <tr><td class="attr">forma_recebimento</td><td>Forma de recebimento</td><td>Retirada, entrega ou Correios</td></tr>
+        <tr><td class="attr">id_cliente</td><td>Cliente</td><td>Relacionado ao pedido</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="entity" id="entrega">
+    <h2>Entrega</h2>
+    <div class="count">6 atributos</div>
+    <table>
+      <thead><tr><th>Atributo</th><th>Descrição</th><th>Regra de negócio associada</th></tr></thead>
+      <tbody>
+        <tr><td class="attr key">id_entrega</td><td>Identificação</td><td>Único</td></tr>
+        <tr><td class="attr">data_prevista</td><td>Data prevista</td><td>Para entregas</td></tr>
+        <tr><td class="attr">data_entrega</td><td>Data realizada</td><td>Após conclusão</td></tr>
+        <tr><td class="attr">status</td><td>Situação</td><td>Deve ser válido</td></tr>
+        <tr><td class="attr">endereco_entrega</td><td>Endereço</td><td>Obrigatório para entrega</td></tr>
+        <tr><td class="attr">id_motorista</td><td>Motorista</td><td>Responsável pela entrega</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="entity" id="motorista">
+    <h2>Motorista</h2>
+    <div class="count">3 atributos</div>
+    <table>
+      <thead><tr><th>Atributo</th><th>Descrição</th><th>Regra de negócio associada</th></tr></thead>
+      <tbody>
+        <tr><td class="attr key">id_motorista</td><td>Identificação</td><td>Único</td></tr>
+        <tr><td class="attr">nome</td><td>Nome</td><td>Obrigatório</td></tr>
+        <tr><td class="attr">telefone</td><td>Telefone</td><td>Quando necessário</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="entity" id="entrada_estoque">
+    <h2>Entrada_Estoque</h2>
+    <div class="count">4 atributos</div>
+    <table>
+      <thead><tr><th>Atributo</th><th>Descrição</th><th>Regra de negócio associada</th></tr></thead>
+      <tbody>
+        <tr><td class="attr key">id_entrada</td><td>Identificação</td><td>Único</td></tr>
+        <tr><td class="attr">data_entrada</td><td>Data de entrada</td><td>Obrigatória</td></tr>
+        <tr><td class="attr">id_nota</td><td>Nota fiscal</td><td>Relacionada à entrada</td></tr>
+        <tr><td class="attr">fornecedor</td><td>Fornecedor</td><td>Identifica a origem</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="entity" id="item_entrada">
+    <h2>Item_Entrada</h2>
+    <div class="count">5 atributos</div>
+    <table>
+      <thead><tr><th>Atributo</th><th>Descrição</th><th>Regra de negócio associada</th></tr></thead>
+      <tbody>
+        <tr><td class="attr key">id_item_entrada</td><td>Identificação</td><td>Único</td></tr>
+        <tr><td class="attr">id_entrada</td><td>Entrada</td><td>Deve pertencer a uma entrada</td></tr>
+        <tr><td class="attr">id_produto</td><td>Produto</td><td>Deve existir</td></tr>
+        <tr><td class="attr">quantidade</td><td>Quantidade recebida</td><td>Maior que zero</td></tr>
+        <tr><td class="attr">codigo_produto</td><td>Código do produto</td><td>Deve corresponder ao produto</td></tr>
+      </tbody>
+    </table>
+    <div class="note">Atenção à privacidade: os exemplos utilizados para ilustrar os atributos devem ser fictícios. Não devem ser utilizados dados reais de clientes, funcionários ou outras pessoas da organização.</div>
+  </section>
+
+</main>
+
+<footer>
+  Gerado a partir da Seção 5 (Dicionário de Dados Conceitual) do README do repositório <a href="https://github.com/Lusca2803/modelagem_banco_de_dados" style="color:inherit">Lusca2803/modelagem_banco_de_dados</a>. PK = chave primária, atribuída pelo grupo com base na coluna "Regra de negócio associada" de cada tabela original.
+</footer>
+
+</body>
+</html>
