@@ -39,8 +39,8 @@ Importante: a organização precisa existir de fato — não é permitido invent
 Kauã Steter de Souza — kauasteter06@gmail.com — Suporte Técnico Júnior
 
 <p align="center">
-  <img src="evidencias_da_organizacao/evidências_visita.jpg" width="32%" />
-  <img src="evidencias_da_organizacao/evidências_visita(2).jpg" width="32%" />
+  <img src="evidencias_da_organizacao/evidências_visita.jpeg" width="32%" />
+  <img src="evidencias_da_organizacao/evidências_visita(2).jpeg" width="32%" />
 </p>
 
 ## 2. Processos de Negócio
