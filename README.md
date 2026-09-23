@@ -308,7 +308,7 @@ COMPRA = @ID_COMPRA + DT_COMPRA + (ID_NOTA) + NM_FORNECEDOR
 ### Entidades reconhecidas
 As principais entidades são:
 
-Cliente, Vendedor, Produto, Estoque, Venda, Item_Venda, Nota_Fiscal, Pedido, Entrega, Motorista, Entrada_Estoque e Item_Entrada.
+`Cliente`, `Vendedor`, `Pedido`, `Produto`, `Estoque`, `Venda`, `Nota_Fiscal`, `Motorista`, `Entrega` e `Compra`
 
 Elas foram escolhidas por representarem os principais processos identificados na empresa.
 
@@ -348,15 +348,15 @@ O modelo será baseado nos processos observados na empresa e dará atenção pri
 
 As entidades foram escolhidas com base nos processos observados na empresa.
 
-Produto e Estoque são importantes para representar o controle das peças. Venda e Item_Venda foram separados porque uma venda pode possuir vários produtos.
+Produto e Estoque são importantes para representar o controle das peças. `Venda` e `Item_Venda` foram separados porque uma venda pode possuir vários produtos.
 
-A mesma ideia foi utilizada em Entrada_Estoque e Item_Entrada, já que uma entrada pode possuir vários produtos.
+A mesma ideia foi utilizada em `Compra`, já que uma entrada pode possuir vários produtos.
 
-Cliente e Vendedor ajudam a identificar quem participa das vendas, enquanto Pedido, Entrega e Motorista representam o processo de entrega.
+`Cliente` e `Vendedor` ajudam a identificar quem participa das vendas, enquanto `Pedido`, `Entrega` e `Motorista` representam o processo de entrega.
 
 A modelagem também considera o problema dos furos de estoque, permitindo que as entradas e saídas dos produtos sejam controladas.
 
-Como alternativa, cogitou-se a manutenção dos registros exclusivamente em planilhas, bem como a concentração das informações em um número reduzido de entidades genéricas. Tal abordagem foi, todavia, descartada por não viabilizar o rastreamento individualizado de entradas, saídas e itens de cada movimentação, o que constitui, precisamente, a causa dos "furos de estoque" atualmente enfrentados pela organização. Optou-se, portanto, pela separação em entidades específicas (Venda/Item_Venda e Entrada_Estoque/Item_Entrada), por proporcionar a granularidade necessária à auditoria individualizada de cada produto movimentado.
+Como alternativa, cogitou-se a manutenção dos registros exclusivamente em planilhas, bem como a concentração das informações em um número reduzido de entidades genéricas. Tal abordagem foi, todavia, descartada por não viabilizar o rastreamento individualizado de entradas, saídas e itens de cada movimentação, o que constitui, precisamente, a causa dos "furos de estoque" atualmente enfrentados pela organização. Optou-se, portanto, pela separação em entidades específicas (`Venda/Item_Venda` e `Compra`), por proporcionar a granularidade necessária à auditoria individualizada de cada produto movimentado.
 
 No que concerne às cardinalidades, sua definição decorreu da observação criteriosa da forma como os processos efetivamente se realizam na organização. A título de exemplo, a cardinalidade **Cliente (1) — (N) Venda** justifica-se pelo fato de um cliente poder realizar múltiplas compras ao longo do tempo, ao passo que cada venda encontra-se vinculada a um único cliente registrado. De modo análogo, a cardinalidade **Pedido (1) — (N) Item_Venda** justifica-se porquanto um mesmo pedido pode compreender diversos produtos, sendo, contudo, cada item de venda associado a um único pedido.
 
