@@ -87,14 +87,14 @@ A finalização do pedido no sistema; o registro e confirmação de entregas e r
 - **RF03:** Registrar vendas.
 - **RF04:** Consultar o estoque.
 - **RF05:** Atualizar o estoque após uma venda.
-- **RF06:** Registrar entrada de produtos.
-- **RF07:** Relacionar a entrada com a nota fiscal.
+- **RF06:** Registrar compra de produtos.
+- **RF07:** Relacionar a compra com a nota fiscal.
 - **RF08:** Registrar pedidos.
 - **RF09:** Informar a forma de recebimento do pedido.
 - **RF10:** Registrar entregas.
 - **RF11:** Consultar movimentações do estoque.
 - **RF12:** Identificar divergências no estoque.
-- **RF13:** O sistema deve atualizar automaticamente os saldos de estoque a partir do registro de vendas e de entradas vinculadas a notas fiscais.
+- **RF13:** O sistema deve atualizar automaticamente os saldos de estoque a partir do registro de vendas e de compras vinculadas a notas fiscais.
 - **RF14:** O sistema deve permitir a localização do cadastro do cliente mediante nome, CPF/CNPJ ou número de pedidos previamente realizados.
 - **RF15:** O sistema deve permitir a validação do status de pagamento associado ao pedido.
 
@@ -323,9 +323,9 @@ Cada entidade possui atributos relacionados às informações que precisam ser a
 - Venda possui itens.
 - Produto participa das vendas.
 - Produto possui controle de estoque.
-- Entrada possui itens.
+- Compra possui itens.
 - Produto participa das entradas.
-- Entrada está relacionada à nota fiscal.
+- Compra está relacionada à nota fiscal.
 - Pedido pode possuir uma entrega.
 - Motorista realiza entregas.
 
