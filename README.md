@@ -207,6 +207,16 @@ Atualmente não há limites definidos de quantidade, valor ou tempo em nenhum do
 | nome        | Nome          | Obrigatório                |
 | matricula   | Matrícula     | Única                      |
 
+### Pedido
+
+| Atributo          | Descrição            | Regra de negócio associada    |
+| ----------------- | --------------------- | ------------------------------ |
+| id_pedido         | Identificação        | Único                          |
+| data_pedido       | Data do pedido       | Obrigatória                    |
+| status            | Situação do pedido   | Deve ser válido                |
+| forma_recebimento | Forma de recebimento | Retirada, entrega ou Correios  |
+| id_cliente        | Cliente               | Relacionado ao pedido          |
+
 ### Produto
 
 | Atributo       | Descrição          | Regra de negócio associada |
@@ -236,16 +246,6 @@ Atualmente não há limites definidos de quantidade, valor ou tempo em nenhum do
 | id_cliente  | Cliente        | Relacionado ao cliente     |
 | id_vendedor | Vendedor       | Relacionado ao vendedor    |
 
-### Item_Venda
-
-| Atributo       | Descrição          | Regra de negócio associada |
-| -------------- | ------------------ | -------------------------- |
-| id_item_venda  | Identificação      | Único                      |
-| id_venda       | Venda              | Deve pertencer a uma venda |
-| id_produto     | Produto            | Deve existir               |
-| quantidade     | Quantidade vendida | Maior que zero             |
-| preco_unitario | Preço unitário     | Valor da venda             |
-
 ### Nota_Fiscal
 
 | Atributo     | Descrição       | Regra de negócio associada |
@@ -255,15 +255,22 @@ Atualmente não há limites definidos de quantidade, valor ou tempo em nenhum do
 | data_emissao | Data de emissão | Obrigatória                |
 | chave_acesso | Chave da nota   | Identifica a nota          |
 
-### Pedido
+### Compra
 
-| Atributo          | Descrição            | Regra de negócio associada    |
-| ----------------- | -------------------- | ------------------------------ |
-| id_pedido         | Identificação        | Único                          |
-| data_pedido       | Data do pedido       | Obrigatória                    |
-| status            | Situação do pedido   | Deve ser válido                |
-| forma_recebimento | Forma de recebimento | Retirada, entrega ou Correios  |
-| id_cliente        | Cliente              | Relacionado ao pedido          |
+| Atributo     | Descrição       | Regra de negócio associada |
+| ------------ | --------------- | -------------------------- |
+| id_compra   | Identificação   | Único                      |
+| data_compra | Data de entrada | Obrigatória                |
+| id_nota      | Nota fiscal     | Relacionada à entrada      |
+| fornecedor   | Fornecedor      | Identifica a origem        |
+
+### Motorista
+
+| Atributo     | Descrição     | Regra de negócio associada |
+| ------------ | ------------- | -------------------------- |
+| id_motorista | Identificação | Único                      |
+| nome         | Nome          | Obrigatório                |
+| telefone     | Telefone      | Quando necessário          |
 
 ### Entrega
 
@@ -275,33 +282,6 @@ Atualmente não há limites definidos de quantidade, valor ou tempo em nenhum do
 | status           | Situação       | Deve ser válido            |
 | endereco_entrega | Endereço       | Obrigatório para entrega   |
 | id_motorista     | Motorista      | Responsável pela entrega   |
-
-### Motorista
-
-| Atributo     | Descrição     | Regra de negócio associada |
-| ------------ | ------------- | -------------------------- |
-| id_motorista | Identificação | Único                      |
-| nome         | Nome          | Obrigatório                |
-| telefone     | Telefone      | Quando necessário          |
-
-### Entrada_Estoque
-
-| Atributo     | Descrição       | Regra de negócio associada |
-| ------------ | --------------- | -------------------------- |
-| id_entrada   | Identificação   | Único                      |
-| data_entrada | Data de entrada | Obrigatória                |
-| id_nota      | Nota fiscal     | Relacionada à entrada      |
-| fornecedor   | Fornecedor      | Identifica a origem        |
-
-### Item_Entrada
-
-| Atributo        | Descrição           | Regra de negócio associada   |
-| --------------- | ------------------- | ----------------------------- |
-| id_item_entrada | Identificação       | Único                         |
-| id_entrada      | Entrada             | Deve pertencer a uma entrada  |
-| id_produto      | Produto             | Deve existir                  |
-| quantidade      | Quantidade recebida | Maior que zero                |
-| codigo_produto  | Código do produto   | Deve corresponder ao produto  |
 
 > **Atenção à privacidade:** Os exemplos utilizados para ilustrar os atributos devem ser fictícios. Não devem ser utilizados dados reais de clientes, funcionários ou outras pessoas da organização.
 
